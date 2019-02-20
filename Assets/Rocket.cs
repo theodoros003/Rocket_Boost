@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
+    Rigidbody rigidBody;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidBody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -21,15 +23,15 @@ public class Rocket : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            print("spaced preced");
+            rigidBody.AddRelativeForce(Vector3.up);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            print("Rotating left");
+            rigidBody.AddRelativeForce(Vector3.left);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            print("Rotating right");
+            rigidBody.AddRelativeForce(Vector3.right);
         }
     }
 }
