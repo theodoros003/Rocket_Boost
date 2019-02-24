@@ -60,7 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Rocket.cs" />
+    <Compile Include="Assets\Scenes\Rocket.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Theodoros/Unity Repos/Rocket_Boost/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
