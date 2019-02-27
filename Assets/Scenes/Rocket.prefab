@@ -431,7 +431,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 42df7c2ff0fcf9b4d80703387c71ff46, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -544,6 +544,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeed: 220
   boostSpeed: 80
+  Boost: {fileID: 8300000, guid: 42df7c2ff0fcf9b4d80703387c71ff46, type: 3}
+  Victory: {fileID: 8300000, guid: 2436c6c7287623a41bdcb5335f48144e, type: 3}
+  Death: {fileID: 8300000, guid: f7c9b19a31f0c7f40a3544190d9a86cc, type: 3}
 --- !u!1 &4206715261237721284
 GameObject:
   m_ObjectHideFlags: 0
