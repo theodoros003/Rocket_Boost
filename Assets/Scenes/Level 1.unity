@@ -267,8 +267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e419e7c350a8fc4c84cf5d873bdc1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 10, z: 0}
-  movementFactor: 0
+  movementVector: {x: 0, y: -10, z: 0}
+  period: 2
 --- !u!1001 &1748341387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -334,16 +334,6 @@ PrefabInstance:
     - target: {fileID: 4206715261003819420, guid: 34373131e474ba04b9d53eef293906fb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 886700891899895237, guid: 34373131e474ba04b9d53eef293906fb,
-        type: 3}
-      propertyPath: ColorBySpeedModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 886700891899895237, guid: 34373131e474ba04b9d53eef293906fb,
-        type: 3}
-      propertyPath: ForceModule.enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

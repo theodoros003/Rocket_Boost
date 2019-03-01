@@ -98,7 +98,7 @@ public class Rocket : MonoBehaviour
 
     private void ApplyBoost()
     {
-        rigidBody.AddRelativeForce(Vector3.up * boostSpeed);
+        rigidBody.AddRelativeForce(Vector3.up * boostSpeed *Time.deltaTime);
         if (!audioSource.isPlaying) // so it doesn't layer
         {
             audioSource.PlayOneShot(Boost);

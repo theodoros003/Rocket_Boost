@@ -545,8 +545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8630606bf82cbbc478e51d46ce907b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 220
-  boostSpeed: 80
+  rotateSpeed: 240
+  boostSpeed: 5500
   Boost: {fileID: 8300000, guid: 42df7c2ff0fcf9b4d80703387c71ff46, type: 3}
   Victory: {fileID: 8300000, guid: 2436c6c7287623a41bdcb5335f48144e, type: 3}
   Death: {fileID: 8300000, guid: f7c9b19a31f0c7f40a3544190d9a86cc, type: 3}
