@@ -19,6 +19,7 @@ public class ObjMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (period <= Mathf.Epsilon) { return; } // to avoid error when period is 0
         float cycles = Time.time / period; // grows continually from 0
         const float tau = Mathf.PI * 2; // about 6.8
         float rawSimWave = Mathf.Sin(cycles * tau); // goas from -1 to +1
