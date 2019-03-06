@@ -21,6 +21,8 @@ public class Rocket : MonoBehaviour
     enum State { Alive, Dying, Transcending }
     State state = State.Alive;
 
+    bool enableCollisions = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +38,27 @@ public class Rocket : MonoBehaviour
             RespondToBoost();
             RespondToRotate();
         }
+        if (Debug.isDebugBuild)
+        {
+            EnableDebugKeys();
+        }
+    }
+
+    void EnableDebugKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            enableCollisions = !enableCollisions;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (state != State.Alive) { return; } // ignore collisions when dead
+        if (state != State.Alive || !enableCollisions) { return; } // ignore collisions when dead
 
         switch (collision.gameObject.tag)
         {
@@ -78,7 +96,13 @@ public class Rocket : MonoBehaviour
 
     private void LoadNextLevel()
     {
-        SceneManager.LoadScene(1);
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        int nextScene = currentScene + 1;
+        if (nextScene == SceneManager.sceneCountInBuildSettings)
+        {
+            nextScene = 0; // loop back to start
+        }
+        SceneManager.LoadScene(nextScene);
     }
 
     private void LoadFirstLevel()
@@ -126,5 +150,6 @@ public class Rocket : MonoBehaviour
         rigidBody.freezeRotation = false; // resume physics control of rotation
     }
 
-    
+
 }
+    
