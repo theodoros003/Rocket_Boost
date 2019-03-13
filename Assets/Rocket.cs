@@ -115,6 +115,10 @@ public class Rocket : MonoBehaviour
         {
             ApplyBoost();
         }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            ApplyBoost();
+        }
         else
         {
             audioSource.Stop();
